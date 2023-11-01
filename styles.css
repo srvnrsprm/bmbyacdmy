@@ -1,0 +1,109 @@
+@font-face {
+    src: url( "assets/victoriaTypewriter.ttf" );
+    font-family: typewriter;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: typewriter;
+}
+#menu-bar {
+  background-color: orange;
+  height: 20px;
+  border-radius: 0px 20px;
+}
+ul {
+  margin-top: -16px;
+}
+li {
+  float: left;
+  border-right: 2px solid black;
+  display: block;
+  width:33%;
+  box-sizing: border-box;
+  font-weight: bold;
+  position: relative;
+}
+li:last-child {
+  border-right: none;
+}
+a {
+  color: black;
+  display: block;
+  text-align: center;
+  position:relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+a span {
+    position: relative;
+    z-index: 1;
+}
+a::before {
+    content: "";
+    position: absolute;
+    background-color: yellow;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate( -50%, -50% );
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+}
+a:hover::before {
+    width: 300px;
+    height: 300px;
+}
+a:active {
+  color: beige;
+  background-color: beige;
+}
+.container {
+  clear: left;
+  padding: 20px;
+  background-color: khaki;
+  border-radius: 20px 0px;
+}
+figure {
+    max-width: min-content;
+    margin: auto;
+    text-align: center;
+}
+figure > img {
+    max-width: inherit;
+}
+figcaption {
+    font-size: 1em;
+    white-space: nowrap;
+}
+.preview {
+    height: 100px;
+    cursor: pointer;
+}
+input[type=text] {
+		border: 0;
+		line-height: 2em;
+}
+textarea {
+		border: 0;
+}
+input[type=submit] {
+		border-radius: 5px;
+		font-weight: bold;
+		padding: 5px 10px;
+		border: 0px;
+		outline: 0;
+		background-color: lightblue;
+}
+div.notify {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+table.stts td:nth-child(1) {
+  width: 90%;
+}
+table.stts td:nth-child(2) {
+  width: 10%;
+}
